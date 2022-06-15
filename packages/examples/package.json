@@ -10,7 +10,7 @@
     "@babel/core": "^7.4.0",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.4.2",
-    "@abcaustralia/storybook-addon-a11ydocs": "^2.0.0",
+    "@abcaustralia/storybook-addon-a11ydocs": "*",
     "@storybook/addon-actions": "^6.4.12",
     "@storybook/addon-docs": "^6.4.12",
     "@storybook/addon-links": "^6.4.12",
