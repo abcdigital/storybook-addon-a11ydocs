@@ -9,7 +9,7 @@ import {
   Stories,
   PRIMARY_STORY,
 } from "@storybook/addon-docs";
-import { A11yDocsBlock } from "../../storybook-addon-a11ydocs/src/components/A11yDocsBlock";
+import { A11yDocsBlock } from "@abcaustralia/storybook-addon-a11ydocs";
 
 export const parameters = {
   docs: {
