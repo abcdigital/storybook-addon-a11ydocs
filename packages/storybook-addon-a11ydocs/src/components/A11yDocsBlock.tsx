@@ -4,7 +4,7 @@ import type {
   A11yDocsParametersType,
   A11yDocsPropertyItemGroup,
 } from "./A11yDocsDescription/types";
-import { DocsContext, DocsContextProps } from "@storybook/addon-docs/blocks";
+import { DocsContext, DocsContextProps } from "@storybook/addon-docs";
 
 export interface A11yDocsBlockProps {
   customProperties: A11yDocsPropertyItemGroup;
