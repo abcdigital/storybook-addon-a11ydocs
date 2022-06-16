@@ -31,6 +31,10 @@ export const A11yDocsBlock: React.FC<A11yDocsBlockProps> = (props: any) => {
 
   const customProperties = overrideCustomProperties || restProperties;
 
+  const hasCustomProperties = Object.values(customProperties).length > 0;
+
+  if (!hasCustomProperties) return null;
+
   return (
     <A11yDocsDescription
       storyId={context?.id}
