@@ -1,10 +1,14 @@
-import { DocsContext, DocsContextProps } from "@storybook/addon-docs/blocks";
 import * as React from "react";
-import type {
-  A11yDocsBlockProps,
-  A11yDocsParametersType,
-} from "./A11yDocsDescription/types";
 import { A11yDocsDescription } from "./A11yDocsDescription/A11yDocsDescription";
+import type {
+  A11yDocsParametersType,
+  A11yDocsPropertyItemGroup,
+} from "./A11yDocsDescription/types";
+import { DocsContext, DocsContextProps } from "@storybook/addon-docs/blocks";
+
+export interface A11yDocsBlockProps {
+  customProperties: A11yDocsPropertyItemGroup;
+}
 
 declare global {
   interface Window {

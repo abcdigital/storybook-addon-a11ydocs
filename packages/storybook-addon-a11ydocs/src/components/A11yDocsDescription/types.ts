@@ -6,10 +6,6 @@ export interface A11yDocsDescriptionProps {
   presetDescription: string;
 }
 
-export interface A11yDocsBlockProps {
-  customProperties: A11yDocsPropertyItemGroup;
-}
-
 export interface A11yDocsPropertyItem {
   description?: string;
 }
