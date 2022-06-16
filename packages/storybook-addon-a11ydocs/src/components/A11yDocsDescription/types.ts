@@ -1,11 +1,3 @@
-import { DocsContextProps } from "@storybook/addon-docs/blocks";
-
-declare global {
-  interface Window {
-    __DOCS_CONTEXT__: React.Context<DocsContextProps>;
-  }
-}
-
 export interface A11yDocsDescriptionProps {
   storyId?: string;
   customProperties: {

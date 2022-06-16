@@ -6,6 +6,12 @@ import type {
 } from "./A11yDocsDescription/types";
 import { A11yDocsDescription } from "./A11yDocsDescription/A11yDocsDescription";
 
+declare global {
+  interface Window {
+    __DOCS_CONTEXT__: React.Context<DocsContextProps>;
+  }
+}
+
 const useDocsContext = (): DocsContextProps => {
   const mainContext = React.useContext(DocsContext);
   const windowContext = React.useContext(
