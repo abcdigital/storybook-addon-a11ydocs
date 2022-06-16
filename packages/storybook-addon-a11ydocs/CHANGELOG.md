@@ -1,5 +1,11 @@
 # @abcaustralia/storybook-addon-a11ydocs
 
+## 2.0.3
+
+### Patch Changes
+
+- e3df49e: Update peer dependency requirements for @storybook/addon-docs
+
 ## 2.0.2
 
 ### Patch Changes
