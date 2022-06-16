@@ -1,5 +1,11 @@
 # @abcaustralia/storybook-addon-a11ydocs
 
+## 2.0.2
+
+### Patch Changes
+
+- cc999f7: Fix import outside module retry
+
 ## 2.0.1
 
 ### Patch Changes
