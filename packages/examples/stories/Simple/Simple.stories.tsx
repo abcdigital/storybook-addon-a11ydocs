@@ -1,7 +1,13 @@
 import { Meta, StoryObj } from "@storybook/react";
 import a11ydocs from "./testData";
 
-const Component = ({ name }) => (
+const Component = ({
+  name,
+  description,
+}: {
+  name: string;
+  description?: string;
+}) => (
   <div
     style={{
       fontFamily:
@@ -13,24 +19,39 @@ const Component = ({ name }) => (
     }}
   >
     <h1>{name} Component</h1>
-    <p>Example component.</p>
+    <p>{description ? description : "Mock component."}</p>
   </div>
 );
 
 export default {
   title: "Simple Component/CSF",
   component: Component,
-  render: () => <Component name="Primary" />,
+} as Meta;
+
+export const DefaultStory: StoryObj = {
   parameters: {
     a11ydocs: a11ydocs.primary,
   },
-} as Meta;
-
-export const DefaultStory: StoryObj = {};
+  render: () => <Component name="Primary" />,
+};
 
 export const SecondaryStory: StoryObj = {
   parameters: {
     a11ydocs: a11ydocs.secondary,
   },
-  render: () => <Component name="Secondary" />,
+  render: () => (
+    <Component
+      name="Secondary"
+      description="Test for various types of markdown."
+    />
+  ),
+};
+
+export const ThirdStory: StoryObj = {
+  render: () => (
+    <Component
+      name="Third"
+      description="Test for when no parameters or custom properties are provided."
+    />
+  ),
 };
