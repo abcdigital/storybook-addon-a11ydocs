@@ -1,5 +1,11 @@
 # @abcaustralia/storybook-addon-a11ydocs
 
+## 2.0.1
+
+### Patch Changes
+
+- 7fbcbdf: Fix import outside module
+
 ## 2.0.0
 
 ### Major Changes
