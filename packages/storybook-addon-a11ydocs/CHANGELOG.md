@@ -1,5 +1,12 @@
 # @abcaustralia/storybook-addon-a11ydocs
 
+## 3.0.0
+
+### Major Changes
+
+- 05cc395: Dropped support for React 17 and below
+- 05cc395: Storybook has made some major changes to its API and as a result support for Storybook 6 and below has been dropped.
+
 ## 2.0.3
 
 ### Patch Changes

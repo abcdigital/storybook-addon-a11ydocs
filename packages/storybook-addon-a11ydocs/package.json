@@ -1,6 +1,6 @@
 {
   "name": "@abcaustralia/storybook-addon-a11ydocs",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Add accessibility docs to Storybook UI",
   "keywords": [
     "storybook-addons",
