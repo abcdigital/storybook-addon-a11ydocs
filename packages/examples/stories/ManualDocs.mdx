@@ -1,0 +1,52 @@
+import { Meta } from "@storybook/addon-docs";
+import * as SimpleStories from "./Simple/Simple.stories";
+import { A11yDocsBlock } from "@abcaustralia/storybook-addon-a11ydocs";
+import a11ydocs from "./testData";
+import { exampleStyles } from "./exampleStyles";
+
+<Meta title="Of Component Mdx" of={SimpleStories} />
+
+# MDX
+
+Outside of Storybook Auto Docs, you can use A11yDocs in two ways:
+
+## with Meta `of`
+
+Associate your MDX file with stories using the `Meta` component, then include `<A11yDocsBlock />` without any arguments to automatically use the primary story.
+
+```tsx
+import { A11yDocsBlock } from "@abcaustralia/storybook-addon-a11ydocs/storybook-addon-a11ydocs";
+import { Meta } from "@storybook/addon-docs";
+import * as Stories from "./Component.stories";
+
+<Meta of={Stories} />;
+
+<A11yDocsBlock />;
+```
+
+<div
+  style={{
+    background: "peachpuff",
+    ...exampleStyles,
+  }}
+>
+  <A11yDocsBlock />
+</div>
+
+## Manually
+
+Associate your MDX file with stories using the `Meta` component, you can then include `<A11yDocsBlock />` without any arguments to automatically use the primary story.
+
+```tsx
+import { A11yDocsBlock } from "@abcaustralia/storybook-addon-a11ydocs/storybook-addon-a11ydocs";
+import { Meta } from "@storybook/addon-docs";
+import * as Stories from "./Component.stories";
+
+<Meta title="Manually specified properties" />;
+
+<A11yDocsBlock customProperties={a11ydocs.secondary} />;
+```
+
+<div style={{ background: "powderblue", ...exampleStyles }}>
+  <A11yDocsBlock customProperties={a11ydocs.secondary} />
+</div>

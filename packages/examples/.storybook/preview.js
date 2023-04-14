@@ -5,13 +5,13 @@ import {
   Subtitle,
   Description,
   Primary,
-  ArgsTable,
+  Controls,
   Stories,
   PRIMARY_STORY,
 } from "@storybook/addon-docs";
 import { A11yDocsBlock } from "@abcaustralia/storybook-addon-a11ydocs";
 
-export const parameters = {
+const parameters = {
   docs: {
     container: DocsContainer,
     page: () => {
@@ -21,7 +21,7 @@ export const parameters = {
           <Subtitle />
           <Description />
           <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
+          <Controls story={PRIMARY_STORY} />
           <A11yDocsBlock />
           <Stories />
         </>
@@ -38,3 +38,10 @@ export const parameters = {
     `,
   },
 };
+
+/** @type { import('@storybook/react').Preview } */
+const preview = {
+  parameters,
+};
+
+export default preview;

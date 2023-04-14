@@ -1,14 +1,10 @@
 import * as React from "react";
-import { Description } from "@storybook/components";
+import { Markdown } from "@storybook/blocks";
 import dedent from "ts-dedent";
 import { A11yDocsDescriptionProps } from "./types";
 
 export const A11yDocsDescription = (props: A11yDocsDescriptionProps) => {
-  const {
-    storyId = "unknown-story",
-    presetDescription,
-    customProperties,
-  } = props;
+  const { presetDescription, customProperties } = props;
 
   const markdown = `
   ## Accessibility
@@ -17,7 +13,8 @@ export const A11yDocsDescription = (props: A11yDocsDescriptionProps) => {
 
   return (
     <div style={{ marginTop: "25px", marginBottom: "40px" }}>
-      <Description key={storyId} markdown={markdown} />
+      {/* @ts-ignore Error regarding not accepting a children prop, it does */}
+      <Markdown>{markdown}</Markdown>
     </div>
   );
 };
