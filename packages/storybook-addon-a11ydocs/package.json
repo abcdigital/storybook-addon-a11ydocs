@@ -37,10 +37,17 @@
       "react-native"
     ]
   },
+  "dependencies": {
+    "ts-dedent": "^2.2.0"
+  },
   "devDependencies": {
+    "@storybook/addon-docs": "^6.4.19",
+    "@storybook/addons": "^6.4.19",
     "@storybook/api": "^6.4.20",
     "@storybook/client-api": "^6.4.20",
+    "@storybook/components": "^6.4.20",
     "@storybook/node-logger": "^6.4.20",
+    "@storybook/theming": "^6.4.19",
     "@types/node": "^14.14.22",
     "@types/react": "^16.8.8",
     "rimraf": "^3.0.2",
@@ -56,11 +63,12 @@
   },
   "scripts": {
     "dev": "tsc --watch --preserveWatchOutput",
-    "build": "npm run build:esm && npm run build:cjs",
+    "build": "pnpm build:esm && pnpm build:cjs",
     "build:esm": "tsc",
+    "lint": "eslint src",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "clean": "rimraf dist",
-    "prepublishOnly": "npm run clean && cp ../../README.md ./ && cp -r ../../assets ./ && npm run build"
+    "clean": "rimraf .turbo && rimraf dist",
+    "prepublishOnly": "pnpm run clean && cp ../../README.md ./ && cp -r ../../assets ./ && pnpm build"
   },
   "publishConfig": {
     "access": "public",
