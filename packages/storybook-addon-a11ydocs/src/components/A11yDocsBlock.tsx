@@ -4,7 +4,8 @@ import type {
   A11yDocsParametersType,
   A11yDocsPropertyItemGroup,
 } from "./A11yDocsDescription/types";
-import { DocsContext, DocsContextProps } from "@storybook/addon-docs";
+import { DocsContext } from "@storybook/blocks";
+import { PreparedStory, Renderer } from "@storybook/types";
 
 export interface A11yDocsBlockProps {
   customProperties: A11yDocsPropertyItemGroup;
@@ -12,15 +13,13 @@ export interface A11yDocsBlockProps {
 
 declare global {
   interface Window {
-    __DOCS_CONTEXT__: React.Context<DocsContextProps>;
+    __DOCS_CONTEXT__: typeof DocsContext;
   }
 }
 
-const useDocsContext = (): DocsContextProps => {
+const useDocsContext = () => {
   const mainContext = React.useContext(DocsContext);
-  const windowContext = React.useContext(
-    window.__DOCS_CONTEXT__
-  ) as DocsContextProps;
+  const windowContext = React.useContext(window.__DOCS_CONTEXT__);
 
   const mainContextAvailable = Object.keys(mainContext).length > 0;
 
@@ -30,12 +29,17 @@ const useDocsContext = (): DocsContextProps => {
 /**
  * For use inside Storybook Docs and MDX
  */
-export const A11yDocsBlock: React.FC<A11yDocsBlockProps> = (props: any) => {
+export const A11yDocsBlock: React.FC<A11yDocsBlockProps> = (props) => {
   const overrideCustomProperties = props.customProperties;
 
   const context = useDocsContext();
 
-  const a11ydocs: A11yDocsParametersType = { ...context?.parameters?.a11ydocs };
+  // @ts-expect-error: primaryStory is a private property
+  const primaryStory = (context?.primaryStory as PreparedStory<Renderer>) || {};
+
+  const a11ydocs: A11yDocsParametersType = {
+    ...primaryStory?.parameters?.a11ydocs,
+  };
 
   const { presetDescription, ...restProperties } = a11ydocs;
 
@@ -47,7 +51,6 @@ export const A11yDocsBlock: React.FC<A11yDocsBlockProps> = (props: any) => {
 
   return (
     <A11yDocsDescription
-      storyId={context?.id}
       presetDescription={presetDescription}
       customProperties={customProperties}
     />

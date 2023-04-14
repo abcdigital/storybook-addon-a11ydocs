@@ -1,7 +1,6 @@
 export interface A11yDocsDescriptionProps {
-  storyId?: string;
   customProperties: {
-    description: string;
+    description?: string;
   };
   presetDescription: string;
 }

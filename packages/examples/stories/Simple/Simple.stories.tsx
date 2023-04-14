@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import a11ydocs from "./testData";
+import a11ydocs from "../testData";
 
 const Component = ({
   name,
