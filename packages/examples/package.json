@@ -13,14 +13,14 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.4",
-    "@storybook/addon-actions": "^7.0.4",
-    "@storybook/addon-docs": "^7.0.4",
-    "@storybook/addon-links": "^7.0.4",
-    "@storybook/addons": "^7.0.4",
-    "@storybook/react-webpack5": "^7.0.4",
-    "@storybook/react": "^7.0.4",
-    "@storybook/theming": "^7.0.4",
-    "storybook": "^7.0.4"
+    "@storybook/addon-actions": "^8.3.1",
+    "@storybook/addon-docs": "^8.3.1",
+    "@storybook/addon-links": "^8.3.1",
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
+    "@storybook/react-webpack5": "^8.3.1",
+    "@storybook/react": "^8.3.1",
+    "@storybook/theming": "^8.3.1",
+    "storybook": "^8.3.1"
   },
   "scripts": {
     "dev": "pnpm storybook",
