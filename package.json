@@ -27,5 +27,5 @@
     "build": "turbo run build --filter=!examples",
     "dev": "turbo run dev --no-cache --parallel --continue"
   },
-  "packageManager": "pnpm@7.30.5"
+  "packageManager": "pnpm@9.6.0"
 }
