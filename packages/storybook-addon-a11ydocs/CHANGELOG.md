@@ -1,5 +1,11 @@
 # @abcaustralia/storybook-addon-a11ydocs
 
+## 4.0.0
+
+### Major Changes
+
+- fbd61ae: Storybook 8 support
+
 ## 3.0.0
 
 ### Major Changes
