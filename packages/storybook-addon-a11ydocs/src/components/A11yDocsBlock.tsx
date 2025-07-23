@@ -4,11 +4,11 @@ import type {
   A11yDocsParametersType,
   A11yDocsPropertyItemGroup,
 } from "./A11yDocsDescription/types";
-import { DocsContext } from "@storybook/blocks";
-import { PreparedStory, Renderer } from "@storybook/types";
+import { DocsContext } from "@storybook/addon-docs/blocks";
+import { PreparedStory, Renderer } from "storybook/internal/types";
 
 export interface A11yDocsBlockProps {
-  customProperties: A11yDocsPropertyItemGroup;
+  customProperties?: A11yDocsPropertyItemGroup;
 }
 
 declare global {

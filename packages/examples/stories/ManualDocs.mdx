@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta } from "@storybook/addon-docs/blocks";
 import * as SimpleStories from "./Simple/Simple.stories";
 import { A11yDocsBlock } from "@abcaustralia/storybook-addon-a11ydocs";
 import a11ydocs from "./testData";
@@ -16,7 +16,7 @@ Associate your MDX file with stories using the `Meta` component, then include `<
 
 ```tsx
 import { A11yDocsBlock } from "@abcaustralia/storybook-addon-a11ydocs/storybook-addon-a11ydocs";
-import { Meta } from "@storybook/addon-docs";
+import { Meta } from "@storybook/addon-docs/blocks";
 import * as Stories from "./Component.stories";
 
 <Meta of={Stories} />;
@@ -39,7 +39,7 @@ Associate your MDX file with stories using the `Meta` component, you can then in
 
 ```tsx
 import { A11yDocsBlock } from "@abcaustralia/storybook-addon-a11ydocs/storybook-addon-a11ydocs";
-import { Meta } from "@storybook/addon-docs";
+import { Meta } from "@storybook/addon-docs/blocks";
 import * as Stories from "./Component.stories";
 
 <Meta title="Manually specified properties" />;

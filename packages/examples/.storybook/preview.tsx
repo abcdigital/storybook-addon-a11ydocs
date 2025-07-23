@@ -7,8 +7,7 @@ import {
   Primary,
   Controls,
   Stories,
-  PRIMARY_STORY,
-} from "@storybook/addon-docs";
+} from "@storybook/addon-docs/blocks";
 import { A11yDocsBlock } from "@abcaustralia/storybook-addon-a11ydocs";
 
 const parameters = {
@@ -21,7 +20,7 @@ const parameters = {
           <Subtitle />
           <Description />
           <Primary />
-          <Controls story={PRIMARY_STORY} />
+          <Controls />
           <A11yDocsBlock />
           <Stories />
         </>
@@ -39,9 +38,12 @@ const parameters = {
   },
 };
 
+const tags = ["autodocs"];
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters,
+  tags,
 };
 
 export default preview;
