@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import a11ydocs from "../testData";
+import React from "react";
 
 const Component = ({
   name,

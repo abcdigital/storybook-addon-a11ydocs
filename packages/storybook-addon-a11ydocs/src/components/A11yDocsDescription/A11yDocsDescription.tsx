@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Markdown } from "@storybook/blocks";
+import { Markdown } from "@storybook/addon-docs/blocks";
 import dedent from "ts-dedent";
 import { A11yDocsDescriptionProps } from "./types";
 
