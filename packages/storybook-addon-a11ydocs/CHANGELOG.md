@@ -1,5 +1,11 @@
 # @abcaustralia/storybook-addon-a11ydocs
 
+## 5.0.0
+
+### Major Changes
+
+- dce1363: Storybook 9 Support
+
 ## 4.0.0
 
 ### Major Changes
